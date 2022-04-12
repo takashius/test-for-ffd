@@ -1,1 +1,12 @@
-<p>estudiantes works!</p>
+<div class="card">
+    <div class="card-header">
+      Estudiantes
+    </div>
+    <div class="card-body">
+      <a routerLink="/solicitudes" class="btn btn-primary m-3" role="button">Agregar Solicitud</a>
+      <app-listado *ngIf="!isLoading; else loading" [dataSource]="dataSource"></app-listado>
+      <ng-template #loading>
+        <mat-progress-spinner class="align-middle m-5 mx-auto" mode="indeterminate"></mat-progress-spinner>
+      </ng-template>
+    </div>
+  </div>
