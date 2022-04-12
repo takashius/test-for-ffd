@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td scope="row">{{solicitud.nombre}}</td>
+      <td>{{solicitud.correo}}</td>
+      <td><a (click)="borrarSolicitud(solicitud)" class="btn btn-danger" role="button">Borrar</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -15,6 +15,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ListarComponent } from './components/solicitudes/listar/listar.component';
+import { AgregarComponent } from './components/solicitudes/agregar/agregar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,16 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ProfesoresComponent,
     EstudiantesComponent,
     ListadoComponent,
-    SolicitudesComponent
+    SolicitudesComponent,
+    ListarComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
