@@ -1,1 +1,18 @@
-<p>personajes works!</p>
+<div class="card">
+    <div class="card-header">
+      Personajes
+    </div>
+    <div class="card-body">
+      <mat-button-toggle-group value="gryffindor" name="fontStyle" aria-label="Font Style" class="m-3">
+        <mat-button-toggle value="gryffindor" (change)="CambiarCasa($event.value)">Gryffindor</mat-button-toggle>
+        <mat-button-toggle value="slytherin" (change)="CambiarCasa($event.value)">Slytherin</mat-button-toggle>
+        <mat-button-toggle value="ravenclaw" (change)="CambiarCasa($event.value)">Ravenclaw</mat-button-toggle>
+        <mat-button-toggle value="hufflepuff" (change)="CambiarCasa($event.value)">Hufflepuff</mat-button-toggle>
+      </mat-button-toggle-group>
+  
+      <app-listado *ngIf="!isLoading; else loading" [dataSource]="dataSource"></app-listado>
+      <ng-template #loading>
+        <mat-progress-spinner class="align-middle m-5 mx-auto" mode="indeterminate"></mat-progress-spinner>
+      </ng-template>
+    </div>
+  </div>
