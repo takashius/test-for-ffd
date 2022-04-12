@@ -10,6 +10,11 @@ import { EstudiantesComponent } from './components/estudiantes/estudiantes.compo
 import { ListadoComponent } from './components/listado/listado.component';
 import { SolicitudesComponent } from './components/solicitudes/solicitudes.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,11 @@ import { SolicitudesComponent } from './components/solicitudes/solicitudes.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
