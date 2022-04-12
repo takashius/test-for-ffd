@@ -1,1 +1,12 @@
-<p>profesores works!</p>
+<div class="card">
+    <div class="card-header">
+      Profesores
+    </div>
+    <div class="card-body">
+  
+      <app-listado *ngIf="!isLoading; else loading" [dataSource]="dataSource"></app-listado>
+      <ng-template #loading>
+        <mat-progress-spinner class="align-middle m-5 mx-auto" mode="indeterminate"></mat-progress-spinner>
+      </ng-template>
+    </div>
+  </div>
